@@ -11,7 +11,7 @@ print('Loading the data...')
 metadata = pd.read_csv('data/LJSpeech-1.1/metadata.csv',
                        dtype='object', quoting=3, sep='|', header=None)
 # uncomment this line if you yave weak GPU
-# metadata = metadata.iloc[:500]
+metadata = metadata.iloc[:500]
 
 # audio filenames
 dot_wav_filenames = metadata[0].values
