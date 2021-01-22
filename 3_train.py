@@ -25,7 +25,7 @@ train_history = model.fit([text_input_training, decoder_input_training],
                           [mel_spectro_training, spectro_training],
                           epochs=NB_EPOCHS, batch_size=BATCH_SIZE,
                           verbose=1, validation_split=0.15)
+model.summary()
 
-
-joblib.dump(train_history.history, 'results/training_history.pkl')
+#joblib.dump(train_history.history, 'results/training_history.pkl')
 model.save('results/model.h5')
